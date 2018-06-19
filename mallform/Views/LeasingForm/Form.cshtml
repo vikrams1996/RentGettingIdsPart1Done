@@ -1,0 +1,124 @@
+﻿
+@model mallform.ViewModel.TenantFormViewModel
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Form", "LeasingForm", FormMethod.Post))
+
+{
+    <br>
+    <div class="banner">
+
+        <img src="~/Content/Images/banner.jpg" />
+
+    </div>
+    <br>
+    <br>
+    <p class="alert alert-info">All Fields Are Required.</p>
+
+    <br>
+    <br>
+
+    <div class="cover">
+
+        <div class="Enquiry">
+
+            <h4 style="text-decoration:underline">Add Tenant</h4>
+            <br>
+
+
+            <label>
+                Shop Name
+            </label>
+           @Html.DropDownListFor(m=>m.Tenant , new SelectList (Model.Tenants , "Id" , "shopName"),"",
+          new { @class = "form-control"})
+
+            <br>
+            <label>
+                Brand Name
+            </label>
+            @Html.TextBoxFor(m => m.brandName, new { @class = "form-control " })
+            @Html.ValidationMessageFor(m => m.brandName)
+            <br>
+            <label>
+                Address
+            </label>
+            @Html.TextBoxFor(m => m.Address, new { @class = "form-control " })
+            @Html.ValidationMessageFor(m => m.Address)
+            <br>
+            <label>
+                Mobile No
+            </label>
+            @Html.TextBoxFor(m => m.mobileNo, new { @class = "form-control ", placeholder = "eg 7838xxxxxx" })
+            @Html.ValidationMessageFor(m => m.mobileNo)
+            <br>
+            <label>
+                Pan No
+            </label>
+            @Html.TextBoxFor(m => m.panNo, new { @class = "form-control " })
+            @Html.ValidationMessageFor(m => m.panNo)
+            <br>
+
+
+
+
+
+
+
+        
+
+        </div>
+
+        <div class="unit">
+            <h4 style="text-decoration:underline"> Add Unit</h4>
+            <br>
+            <label>
+                Size
+            </label>
+            @Html.TextBoxFor(m=>m.Size , new { @class = "form-control" })
+            @Html.ValidationMessageFor(m=>m.Size)
+            <label>
+                Floor
+            </label>
+            @Html.TextBoxFor(m=>m.Floor , new { @class = "form-control"})
+            @Html.ValidationMessageFor(m=>m.Floor)
+            <label>
+                Shop Number
+            </label>       
+            @Html.DropDownListFor(m=>m.Unit , new SelectList(Model.Units ,"Id" ,"Name"),"" ,
+           new { @class = "form-control"}) 
+           
+        </div>
+
+
+        <div class="Rent">
+            <h4 style="text-decoration:underline">Lease A Unit</h4>
+            <br>
+
+
+            @Html.LabelFor(m => m.startDate)
+            <br>
+            @Html.TextBoxFor(m => m.startDate, new { @class = "form-control" , placeholder="eg 20 jul 2018" })
+            @Html.ValidationMessageFor(m => m.startDate)
+            <br>
+            @Html.LabelFor(m => m.endDate)
+            <br>
+            @Html.TextBoxFor(m => m.endDate, new { @class = "form-control" , placeholder = "eg 20 aug 2018" })
+            @Html.ValidationMessageFor(m => m.endDate)
+            <br>
+            @Html.LabelFor(m => m.Amount)
+            <br>
+            @Html.TextBoxFor(m => m.Amount, new { @class = "form-control" ,placeholder= "eg 40,000"})
+            @Html.ValidationMessageFor(m => m.Amount)
+        </div>
+
+        <div class="button">
+            <button type="submit" class="btn btn-primary">Submit </button>
+
+
+        </div>
+
+    </div>
+}

@@ -1,0 +1,116 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: midnightblue;
+    background-color:whitesmoke;
+    
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*BOOT STRAP OVERRIDES*/
+.navbar-inverse {
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-brand {
+  
+    font-weight: bold;
+}
+
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.btn-primary {
+    
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+}
+
+.unit {
+ 
+    margin-left:180px;
+    width:220px;
+    float:left;
+    
+    
+
+
+}
+
+.Enquiry{
+    float:left;
+    width:210px;
+    
+
+}
+
+.button{
+    margin-top:80px;
+    float:none;
+    margin-left:820px;
+    
+}
+
+.btn {
+   
+    padding: 8px 45px;
+   
+    font-size: 18px;
+    font-weight: 400;
+    line-height: -5.571429;
+    border-radius: 5px;
+
+}
+
+.Rent {
+  
+    
+    margin-left:780px;
+    width:220px;
+    float:none;
+    
+    
+}
+
+.cover {
+
+    background-color: powderblue;
+    border-radius:10px;
+    padding:70px;
+}
+
+.banner>img {
+
+  margin-left:0px;
+  padding:0;
+  width:1142px;
+  
+
+}
